@@ -16,3 +16,9 @@ export type localStorageUser = {
   classname: string,
   department: string,
 }
+
+
+export type loginDetailsType={
+  email:string,
+  password:string
+}
