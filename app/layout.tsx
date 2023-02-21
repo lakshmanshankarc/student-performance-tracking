@@ -1,5 +1,6 @@
+"use client"
 import './globals.css'
-
+import { CookiesProvider } from 'react-cookie'
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +13,11 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <CookiesProvider>
+          {children}
+        </CookiesProvider>
+      </body>
     </html>
   )
 }
