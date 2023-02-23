@@ -18,6 +18,7 @@ function Login() {
       let res = await axios.post("/api/user/login", user)
       window.localStorage.setItem("user", res.data.user)
       SetCookie('token', res.data.token, { path: '/' });
+      alert("User logged In Successfull")
     } catch (e) {
       alert("Unable to login user")
     }

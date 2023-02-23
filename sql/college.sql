@@ -15,7 +15,68 @@ CREATE TABLE Userdetails(
    password text NOT NULL,
    classname varchar(50) NOT NULL,
    department varchar(50) NOT NULL,
-   role varchar(50) NOT NULL,
-   PRIMARY KEY (id)
+   role varchar(50) NOT NULL
+);
+ALTER TABLE Userdetails ADD UNIQUE KEY(id);
+
+/* CREATE COMPUTER SCIENCES TABLES */
+-- First CS
+
+CREATE TABLE FirstCSI(
+   id varchar(20) NOT NULL,
+   tamil1 varchar(50),
+   english1 varchar(50),
+   maths1 varchar(50),
+   dfa varchar(50),
+   cprogramming varchar(50),
+   clab varchar(50)
 );
 
+-- SecondCSI
+CREATE TABLE FirstCSII(
+   id varchar(20) NOT NULL,
+   tamil2 varchar(50),
+   english2 varchar(50),
+   cpp varchar(50),
+   discretemath varchar(50),
+   ib varchar(50),
+   cpplab varchar(50)
+);
+
+
+CREATE TABLE SecondCSI(
+  id varchar(20) NOT NULL,
+  java varchar(20),
+  ds varchar(20),
+  cbot varchar(20),
+  seandspm varchar(20),
+  javalab varchar(20)
+);
+
+CREATE TABLE SecondCSII(
+  id varchar(20) NOT NULL,
+  linux varchar(20),
+  ssos varchar(20),
+  baccounting varchar(20),
+  linuxlab varchar(20)
+);
+
+
+CREATE TABLE ThirdCSI(
+  id varchar(20) NOT NULL,
+  dbms varchar(20),
+  vb varchar(20),
+  python varchar(20),
+  stesting varchar(20),
+  vbdbmslab varchar(20)
+  
+);
+
+CREATE TABLE ThirdCSII(
+  id varchar(20) NOT NULL,
+  project varchar(20),
+  iot varchar(20),
+  cgmultimedia varchar(20),
+  webtech varchar(20),
+  cgmultimedialab varchar(20)
+);

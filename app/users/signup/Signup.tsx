@@ -7,9 +7,9 @@ const intial: userDetailsType = {
   email: '',
   username: '',
   password: '',
-  classname: '',
-  department: '',
-  role: ''
+  classname: 'I',
+  department: 'CS',
+  role: 'student'
 
 }
 function Signup() {
@@ -17,8 +17,12 @@ function Signup() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    let res = await axios.post('/api/user/signup', user)
-    console.log(res)
+    try {
+      let res = await axios.post('/api/user/signup', user)
+      alert("User Created Successfully");
+    } catch (e) {
+      alert("Unable to create User");
+    }
   }
   return (
     <div>
@@ -37,13 +41,27 @@ function Signup() {
         <input type="password" name="password" id="password" onChange={(e) => setUser({ ...user, password: e.target.value })} />
 
         <label htmlFor="class">Class</label>
-        <input type="text" name="classname" id="class" onChange={(e) => setUser({ ...user, classname: e.target.value })} />
+        <select name="classname" id="class" onChange={(e) => setUser({ ...user, classname: e.target.value })} defaultValue="I">
+          <option value="First">I</option>
+          <option value="Second">II</option>
+          <option value="Third">III</option>
+        </select>
+        {/* <input type="text" name="classname" id="class" onChange={(e) => setUser({ ...user, classname: e.target.value })} /> */}
 
         <label htmlFor="department">Department</label>
-        <input type="text" name="department" id="department" onChange={(e) => setUser({ ...user, department: e.target.value })} />
+        <select name="department" id="class" onChange={(e) => setUser({ ...user, department: e.target.value })} defaultValue="CS">
+          <option value="CS">CS</option>
+          <option value="IT">IT</option>
+          {/* <option value="DA">III</option> */}
+        </select>
+        {/* <input type="text" name="department" id="department" onChange={(e) => setUser({ ...user, department: e.target.value })} /> */}
 
         <label htmlFor="role">Role</label>
-        <input type="text" name="role" id="role" onChange={(e) => setUser({ ...user, role: e.target.value })} />
+        <select name="role" id="class" onChange={(e) => setUser({ ...user, role: e.target.value })} defaultValue="student">
+          <option value="student">Student</option>
+          <option value="admin">Admin</option>
+          <option value="teacher">Teacher</option>
+        </select>
 
         <button type="submit">Submit</button>
       </form>
