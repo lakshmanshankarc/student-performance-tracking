@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (!token) res.status(200).json({ redirect: true })
     else {
         verify(token!, process.env.JWT_SECRET!, (err, usr) => {
-            if (err) { res.status(200).json({ error: 'error' }) }
+            if (err) { res.status(200).json({ error: err }) }
             else {
                 res.status(200).json({ redirect: false })
             }

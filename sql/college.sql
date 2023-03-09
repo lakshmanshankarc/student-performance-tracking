@@ -31,6 +31,7 @@ CREATE TABLE FirstCSI(
    cprogramming varchar(50),
    clab varchar(50)
 );
+ALTER TABLE FirstCSI ADD column testname varchar(50) NOT NULL;
 
 -- SecondCSI
 CREATE TABLE FirstCSII(
@@ -42,6 +43,7 @@ CREATE TABLE FirstCSII(
    ib varchar(50),
    cpplab varchar(50)
 );
+ALTER TABLE FirstCSII ADD column testname varchar(50) NOT NULL;
 
 
 CREATE TABLE SecondCSI(
@@ -52,6 +54,8 @@ CREATE TABLE SecondCSI(
   seandspm varchar(20),
   javalab varchar(20)
 );
+ALTER TABLE SecondCSI ADD column testname varchar(50) NOT NULL;
+
 
 CREATE TABLE SecondCSII(
   id varchar(20) NOT NULL,
@@ -60,6 +64,8 @@ CREATE TABLE SecondCSII(
   baccounting varchar(20),
   linuxlab varchar(20)
 );
+ALTER TABLE SecondCSII ADD column testname varchar(50) NOT NULL;
+
 
 
 CREATE TABLE ThirdCSI(
@@ -69,8 +75,9 @@ CREATE TABLE ThirdCSI(
   python varchar(20),
   stesting varchar(20),
   vbdbmslab varchar(20)
-  
 );
+ALTER TABLE ThirdCSI ADD column testname varchar(50) NOT NULL;
+
 
 CREATE TABLE ThirdCSII(
   id varchar(20) NOT NULL,
@@ -80,3 +87,4 @@ CREATE TABLE ThirdCSII(
   webtech varchar(20),
   cgmultimedialab varchar(20)
 );
+ALTER TABLE ThirdCSII ADD column testname varchar(50) NOT NULL;

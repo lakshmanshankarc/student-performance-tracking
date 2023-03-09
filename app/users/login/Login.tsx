@@ -19,6 +19,7 @@ function Login() {
       window.localStorage.setItem("user", res.data.user)
       SetCookie('token', res.data.token, { path: '/' });
       alert("User logged In Successfull")
+      window.location.href = "/dashboard";
     } catch (e) {
       alert("Unable to login user")
     }
@@ -26,16 +27,16 @@ function Login() {
   return (
     <div>
       <div>
-        <form onSubmit={handleSubmit} className=" w-full flex flex-col bg-slate-500">
-          <h1>Login Componnet</h1>
+        <form onSubmit={handleSubmit} className=" w-full flex h-screen py-44 flex-col  justify-center items-center circle-two">
+          <h1 className=' font-sans font-extrabold text-4xl'>Login Page</h1>
 
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" onChange={(e) => setUser({ ...user, email: e.target.value })} />
+          <label htmlFor="email" className='font-extrabold font-sans'>Email</label>
+          <input type="email" name="email" id="email" onChange={(e) => setUser({ ...user, email: e.target.value })} className="input w-full max-w-xl" placeholder='enter email' />
 
-          <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" onChange={(e) => setUser({ ...user, password: e.target.value })} />
+          <label htmlFor="password" className='font-extrabold font-sans'>Password</label>
+          <input type="password" name="password" id="password" onChange={(e) => setUser({ ...user, password: e.target.value })} className="input w-full max-w-xl" placeholder='enter password' />
 
-          <button type="submit">Submit</button>
+          <button type="submit" className='btn w-full max-w-xl m-5 bg-indigo-600 border-0'>Submit</button>
         </form>
       </div>
     </div>
