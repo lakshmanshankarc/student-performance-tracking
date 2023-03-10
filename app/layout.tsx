@@ -1,7 +1,6 @@
 "use client"
 import './globals.css'
 import { CookiesProvider } from 'react-cookie'
-import { redirectIfNoToken } from '@/utils/logging'
 export default function RootLayout({
   children,
 }: {

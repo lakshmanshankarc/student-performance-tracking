@@ -10,7 +10,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if (method === "POST") {
         const { email, password } = req.body;
         // if user already exists, return usr else create new user
-        const [rows, fields]: [any, any] = await pool.query("SELECT * FROM Userdetails WHERE email = ?", [email]);
+        const [rows, fields]: [any, any] = await pool.query(`SELECT * FROM Userdetails WHERE email = "${email}"`);
         if (rows.length > 0) {
             const user = rows[0];
             const others = { ...user, password: undefined };
@@ -18,7 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             if (isPasswordValid) {
                 const token = sign({ user: user }, process.env.JWT_SECRET!);
                 res.status(201).json({ message: "User logged in successfully", token: token, user: others });
-                
+
             } else {
                 res.status(401).json({ message: "Invalid credentials" });
             }

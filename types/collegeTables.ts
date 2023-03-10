@@ -1,4 +1,4 @@
-export type FirstCSI = {
+export type firstCSI = {
     id: string;
     tamil1: string,
     english1: string,
@@ -9,7 +9,7 @@ export type FirstCSI = {
     testname: string,
 }
 
-export type FirstCSII = {
+export type firstCSII = {
     id: string;
     tamil2: string,
     english2: string,
@@ -20,7 +20,7 @@ export type FirstCSII = {
     testname: string,
 }
 
-export type SecondCSI = {
+export type secondCSI = {
     id: string;
     java: string,
     ds: string,
@@ -30,7 +30,7 @@ export type SecondCSI = {
     testname: string,
 }
 
-export type SecondCSII = {
+export type secondCSII = {
     id: string;
     linux: string,
     ssos: string,
@@ -39,7 +39,7 @@ export type SecondCSII = {
     testname: string,
 }
 
-export type ThirdCSI = {
+export type thirdCSI = {
     id: string;
     dbms: string,
     vb: string,
@@ -49,7 +49,7 @@ export type ThirdCSI = {
     testname: string,
 }
 
-export type ThirdCSII = {
+export type thirdCSII = {
     id: string;
     project: string,
     stestinglab: string,

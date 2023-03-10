@@ -9,8 +9,8 @@ const intial: userDetailsType = {
   password: '',
   classname: 'First',
   department: 'CS',
-  role: 'student'
-
+  role: 'student',
+  tablename:'FirstCSI'
 }
 function Signup() {
   const [user, setUser] = useState<userDetailsType>(intial);
@@ -18,6 +18,7 @@ function Signup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
+      user.tablename = user.classname + user.department + "II";
       let res = await axios.post('/api/user/signup', user)
       alert("User Created Successfully");
     } catch (e) {
@@ -27,7 +28,7 @@ function Signup() {
   return (
     <div>
       <form onSubmit={handleSubmit} className=" w-full flex h-screen py-44 flex-col circle-grad justify-center items-center">
-        <h1 className=' font-sans font-extrabold text-3xl'>Sign Up Here</h1>
+     s   <h1 className=' font-sans font-extrabold text-3xl'>Sign Up Here</h1>
         <label htmlFor="id" className='font-extrabold font-sans'>UserID</label>
         <input type="text" placeholder="Type here" className="input w-full max-w-xl" name="id" id="id" onChange={(e) => setUser({ ...user, id: e.target.value })} />
 

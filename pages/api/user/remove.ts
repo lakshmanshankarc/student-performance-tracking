@@ -8,19 +8,19 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req;
     if (method === "POST") {
         const { email, password } = req.body;
-        // Check if user exists
-        const [rows, fields]: [any, any] = await pool.query("SELECT * FROM Userdetails WHERE email = ?", [email]);
+        // if user already exists, return usr else create new user
+        const [rows, fields]: [any, any] = await pool.query(`SELECT * FROM Userdetails WHERE email = "${email}"`);
         if (rows.length > 0) {
             const user = rows[0];
             const isPasswordValid = await compare(password, user.password);
             if (isPasswordValid) {
-                const query = "DELETE FROM Userdetails WHERE email = ?";
-                const q = pool.query(query, [email]);
+                const [rows, fields]: [any, any] = await pool.query(`DELETE FROM Userdetails WHERE email = "${email}`)
+                res.status(201).json('User Deleted from the database');
             } else {
-                res.status(401).json({ message: "Invalid credentials" });
+                res.status(201).json({ message: "Invalid credentials", rows: rows });
             }
         } else {
-            res.status(401).json({ message: "Invalid credentials" });
+            res.status(201).json({ message: "Invalid credentials",rows:rows });
         }
     }
 }

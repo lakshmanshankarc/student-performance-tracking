@@ -1,6 +1,7 @@
 import { userDetailsType } from "@/types/userDetails";
-import { FirstCSI, FirstCSII, SecondCSI, SecondCSII, ThirdCSI, ThirdCSII } from "@/types/collegeTables";
-export const ICSFirst: FirstCSI = {
+import axios from "axios";
+import { firstCSI, firstCSII, secondCSI, secondCSII, thirdCSI, thirdCSII } from "@/types/collegeTables";
+export const FirstCSI: firstCSI = {
     id: "",
     tamil1: "",
     english1: "",
@@ -10,7 +11,7 @@ export const ICSFirst: FirstCSI = {
     clab: "",
     testname: "",
 }
-export const IICSFirst: FirstCSII = {
+export const FirstCSII: firstCSII = {
     id: "",
     tamil2: "",
     english2: "",
@@ -21,7 +22,7 @@ export const IICSFirst: FirstCSII = {
     testname: "",
 }
 
-export const ICSSecond: SecondCSI = {
+export const SecondCSI: secondCSI = {
     id: "",
     java: "",
     ds: "",
@@ -31,7 +32,7 @@ export const ICSSecond: SecondCSI = {
     testname: "",
 }
 
-export const IICSSecond: SecondCSII = {
+export const SecondCSII: secondCSII = {
     id: "",
     linux: "",
     ssos: "",
@@ -40,7 +41,7 @@ export const IICSSecond: SecondCSII = {
     testname: "",
 }
 
-export const ICSThird: ThirdCSI = {
+export const ThirdCSI: thirdCSI = {
     id: "",
     dbms: "",
     vb: "",
@@ -50,7 +51,7 @@ export const ICSThird: ThirdCSI = {
     testname: "",
 }
 
-export const IICSThird: ThirdCSII = {
+export const ThirdCSII: thirdCSII = {
     id: "",
     project: "",
     stestinglab: "",
@@ -59,4 +60,28 @@ export const IICSThird: ThirdCSII = {
     webtech: "",
     iot: "",
     testname: "",
+}
+
+export async function resolveTableName() {
+    console.log("is the name");
+    const res = await axios.get("/api/user/getuserdetails");
+    const user: { user: userDetailsType } = (await res).data;
+    const name = user.user.tablename;
+
+    switch (name) {
+        case "FirstCSI":
+            return FirstCSI;
+        case "FirstCSII":
+            return FirstCSII;
+        case "SecondCSI":
+            return SecondCSI;
+        case "SecondCSII":
+            return SecondCSII;
+        case "ThirdCSI":
+            return ThirdCSI;
+        case "ThirdCSII":
+            return ThirdCSII;
+        default:
+            return FirstCSI;
+    }
 }

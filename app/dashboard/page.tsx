@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { userDetailsType } from "@/types/userDetails";
 import StudentDetails from "./StudentDetails";
-import { redirect } from "next/dist/server/api-utils";
-
+import Link from "next/link";
 const intial: userDetailsType = {
     id: "",
     email: "",
@@ -13,6 +12,7 @@ const intial: userDetailsType = {
     classname: "",
     department: "",
     role: "",
+    tablename: "",
 };
 
 function Navbar() {
@@ -46,8 +46,8 @@ function Navbar() {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </a>
                             <ul className="p-2 bg-black text-white">
-                                <li className=" hover:bg-slate-600 rounded-lg"><a>Post/get</a></li>
-                                <li className=" hover:bg-slate-600 rounded-lg"><a>Analytics</a></li>
+                                <li className=" hover:bg-slate-600 rounded-lg"><Link href={"/dashboard/marks"}>Post/get</Link></li>
+                                <li className=" hover:bg-slate-600 rounded-lg"><Link href={"./marks"}>Analytics</Link></li>
                             </ul>
                         </li>
                     </ul>
@@ -60,7 +60,7 @@ function Navbar() {
 }
 export default Navbar;
 
-export async function getUser(user: userDetailsType, setUser: any) {
+async function getUser(user: userDetailsType, setUser: any) {
     try {
         let res = await axios.get("/api/user/details");
         setUser(res.data);
@@ -118,10 +118,9 @@ function randomColor() {
 }
 
 
-export async function redirectIfNoToken() {
-    let res = await axios.get("http://localhost:3000/api/user/islogged")
+async function redirectIfNoToken() {
+    let res = await axios.get("/api/user/islogged")
     if (res.data.redirect) {
         window.location.href = "/users/login"
     }
-
 }

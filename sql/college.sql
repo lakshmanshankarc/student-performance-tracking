@@ -6,7 +6,6 @@ CREATE DATABASE ComputerScience;
 -- Use
 USE ComputerScience;
 
-
 -- Table Userdetails
 CREATE TABLE Userdetails(
    id varchar(20) NOT NULL,
@@ -15,7 +14,8 @@ CREATE TABLE Userdetails(
    password text NOT NULL,
    classname varchar(50) NOT NULL,
    department varchar(50) NOT NULL,
-   role varchar(50) NOT NULL
+   role varchar(50) NOT NULL,
+   tablename varchar(50) NOT NULL
 );
 ALTER TABLE Userdetails ADD UNIQUE KEY(id);
 

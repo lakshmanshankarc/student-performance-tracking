@@ -5,7 +5,8 @@ export type userDetailsType = {
   password: string,
   classname: string,
   department: string,
-  role: string
+  role: string,
+  tablename:string,
 }
 
 

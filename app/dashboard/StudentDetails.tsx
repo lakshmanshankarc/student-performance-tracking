@@ -11,6 +11,7 @@ const intial: Array<userDetailsType> = [{
     classname: "",
     department: "",
     role: "",
+    tablename:"",
 }]
 function StudentDetails() {
     const [user, setUser] = useState<Array<userDetailsType>>(intial);
