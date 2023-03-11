@@ -18,6 +18,7 @@ CREATE TABLE Userdetails(
    tablename varchar(50) NOT NULL
 );
 ALTER TABLE Userdetails ADD UNIQUE KEY(id);
+ALTER TABLE Userdetails ADD UNIQUE KEY(email);
 
 /* CREATE COMPUTER SCIENCES TABLES */
 -- First CS
