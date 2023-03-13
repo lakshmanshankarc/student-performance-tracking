@@ -28,7 +28,7 @@ function Signup() {
   return (
     <div>
       <form onSubmit={handleSubmit} className=" w-full flex h-screen py-44 flex-col circle-grad justify-center items-center">
-     s   <h1 className=' font-sans font-extrabold text-3xl'>Sign Up Here</h1>
+        <h1 className=' font-sans font-extrabold text-3xl'>Sign Up Here</h1>
         <label htmlFor="id" className='font-extrabold font-sans'>UserID</label>
         <input type="text" placeholder="Type here" className="input w-full max-w-xl" name="id" id="id" onChange={(e) => setUser({ ...user, id: e.target.value })} />
 

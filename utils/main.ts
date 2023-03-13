@@ -86,3 +86,21 @@ export async function resolveTableName() {
     }
 }
 
+interface StudentMarks {
+  [key: string]: string;
+}
+
+export function calculateTotalMarks(studentMarks:StudentMarks ): number {
+  const totalMarks: number = Object.values(studentMarks).reduce((total: number, mark: string): number => {
+    return total + (isNaN(Number(mark)) ? 0 : Number(mark));
+  }, 0);
+  return totalMarks;
+}
+
+export function destructIdAndTest(object:any){
+    const { id, testname, ...others } = object;
+    const filtered={others}
+    return filtered
+}
+// Path: store.ts
+
