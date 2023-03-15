@@ -11,14 +11,13 @@ const intial: Array<userDetailsType> = [{
     classname: "",
     department: "",
     role: "",
-    tablename:"",
+    tablename: "",
 }]
 function StudentDetails() {
     const [user, setUser] = useState<Array<userDetailsType>>(intial);
     useEffect(() => {
         getStudents(user, setUser);
     }, []);
-    console.log(user)
     return (
         <div className=' flex justify-center items-center flex-col'>
             <h1>Student Details</h1>
@@ -49,8 +48,7 @@ async function getStudents(user: Array<userDetailsType>, setUser: any) {
     try {
         const response = await axios.get('/api/marks/getstudentforteacher', {
         })
-        setUser(response.data)
-        console.log(response.data, "response");
+        setUser(response.data);
     } catch (error) {
         console.log(error)
     }

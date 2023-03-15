@@ -63,11 +63,11 @@ export const ThirdCSII: thirdCSII = {
 }
 
 export async function resolveTableName() {
-    console.log("is the name");
-    const res = await axios.get("/api/user/getuserdetails");
+    const res = await axios.get("/api/user/details", {
+        withCredentials: true,
+    });
     const user: { user: userDetailsType } = (await res).data;
     const name = user.user.tablename;
-
     switch (name) {
         case "FirstCSI":
             return FirstCSI;
@@ -84,23 +84,30 @@ export async function resolveTableName() {
         default:
             return FirstCSI;
     }
+
 }
 
 interface StudentMarks {
-  [key: string]: string;
+    [key: string]: string;
 }
 
-export function calculateTotalMarks(studentMarks:StudentMarks ): number {
-  const totalMarks: number = Object.values(studentMarks).reduce((total: number, mark: string): number => {
-    return total + (isNaN(Number(mark)) ? 0 : Number(mark));
-  }, 0);
-  return totalMarks;
+export function calculateTotalMarks(studentMarks: StudentMarks): number {
+    const totalMarks: number = Object.values(studentMarks).reduce((total: number, mark: string): number => {
+        return total + (isNaN(Number(mark)) ? 0 : Number(mark));
+    }, 0);
+    return totalMarks;
 }
 
-export function destructIdAndTest(object:any){
+export function destructIdAndTest(object: any) {
     const { id, testname, ...others } = object;
-    const filtered={others}
+    const filtered = { others }
     return filtered
 }
 // Path: store.ts
-
+export function randomColorGenerator(num: number, opacity: number) {
+    let arr = []
+    for (let i = 0; i < num; i++) {
+        arr.push(`rgba(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${opacity})`)
+    }
+    return arr
+}

@@ -1,4 +1,5 @@
 -- Database Name ComputerScience
+DROP DATABASE ComputerScience;
 
 CREATE DATABASE ComputerScience;
 
@@ -32,6 +33,7 @@ CREATE TABLE FirstCSI(
    cprogramming varchar(50),
    clab varchar(50)
 );
+ALTER TABLE FirstCSI ADD FOREIGN KEY(id) REFERENCES Userdetails(id);
 ALTER TABLE FirstCSI ADD column testname varchar(50) NOT NULL;
 
 -- SecondCSI
@@ -44,6 +46,7 @@ CREATE TABLE FirstCSII(
    ib varchar(50),
    cpplab varchar(50)
 );
+ALTER TABLE FirstCSII ADD FOREIGN KEY(id) REFERENCES Userdetails(id);
 ALTER TABLE FirstCSII ADD column testname varchar(50) NOT NULL;
 
 
@@ -55,6 +58,7 @@ CREATE TABLE SecondCSI(
   seandspm varchar(20),
   javalab varchar(20)
 );
+ALTER TABLE SecondCSI ADD FOREIGN KEY(id) REFERENCES Userdetails(id);
 ALTER TABLE SecondCSI ADD column testname varchar(50) NOT NULL;
 
 
@@ -66,7 +70,7 @@ CREATE TABLE SecondCSII(
   linuxlab varchar(20)
 );
 ALTER TABLE SecondCSII ADD column testname varchar(50) NOT NULL;
-
+ALTER TABLE SecondCSII ADD FOREIGN KEY(id) REFERENCES Userdetails(id);
 
 
 CREATE TABLE ThirdCSI(
@@ -78,6 +82,7 @@ CREATE TABLE ThirdCSI(
   vbdbmslab varchar(20)
 );
 ALTER TABLE ThirdCSI ADD column testname varchar(50) NOT NULL;
+ALTER TABLE ThirdCSI ADD FOREIGN KEY(id) REFERENCES Userdetails(id);
 
 
 CREATE TABLE ThirdCSII(
@@ -88,4 +93,6 @@ CREATE TABLE ThirdCSII(
   webtech varchar(20),
   cgmultimedialab varchar(20)
 );
+
+ALTER TABLE ThirdCSII ADD FOREIGN KEY(id) REFERENCES Userdetails(id);
 ALTER TABLE ThirdCSII ADD column testname varchar(50) NOT NULL;

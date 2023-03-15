@@ -17,13 +17,7 @@ function PostMarks() {
     }
     useEffect(() => {
         getTable();
-    }, []);
-
-    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        // e.preventDefault();
-        // const data = new FormData(e.currentTarget);
-        // console.log(data);
-    // };
+    }, [])
     if (isStudent) return <> Study Hard to Get Good Grades</>;
     else {
         return (
@@ -52,8 +46,8 @@ function PostMarks() {
                 >
                     {subjects &&
                         subjects.map((sub, index) => (
-                            <div key={index} 
-                            className="flex px-0.5 bg-zinc-100 ">
+                            <div key={index}
+                                className="flex px-0.5 bg-zinc-100 ">
                                 <input
                                     type="text"
                                     name={`${sub}`}
@@ -64,7 +58,7 @@ function PostMarks() {
                             </div>
                         ))}
                     <div className="flex w-max h-10 rounded-lg justify-center items-center font-mono text-slate-100 m-1.5 px-10 bg-zinc-600">
-                        <input type="submit" value="submit" className="text-black"/>
+                        <input type="submit" value="submit" className="text-black" />
                     </div>
                 </form>
 

@@ -1,16 +1,15 @@
 
 import React from 'react'
 import Link from 'next/link'
-export default function Home() {
+export default function page() {
   return (
-    <div className=' w-full h-screen flex justify-center items-center flex-col'>
-      <p className=' text-2xl text-fuchsia-500'>Welcome to</p>
-      <h1 className=' text-7xl font-extrabold '> Student Performance Tracking application</h1>
-      <p className=' text-2xl text-purple-700'>Please login to continue</p>
-      <div className="">
-        <Link href="/users/login" >
-          <p className='text-2xl py-2 px-44 hover:bg-slate-200 hover:border-dashed rounded-lg hover:transition-all bg-fuchsia-500 justify-center items-center'>Login</p>
-        </Link>
+    <div className="hero min-h-screen bg-base-200">
+      <div className="hero text-center">
+        <div className=" w-max">
+          <h1 className="text-5xl font-bold">Student Performance Tracking</h1>
+          <p className="py-6 text-xl">Student Performance Tracking is a web application built using NextJS and MySQL which helps student and teachers to track academic progress.</p>
+          <Link href='/users/login' className="btn btn-primary px-10">Login</Link>
+        </div>
       </div>
     </div>
   )

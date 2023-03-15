@@ -17,6 +17,7 @@ export default function RootLayout({
         <CookiesProvider>
           {children}
         </CookiesProvider>
+
       </body>
     </html>
   )

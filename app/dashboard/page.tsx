@@ -22,7 +22,7 @@ function Navbar() {
         getUser(user, setUser);
         randomColor();
         return () => {
-            console.log(user);
+            // cleanup
         };
     }, []);
 
@@ -39,7 +39,24 @@ function Navbar() {
                                 <ProfileCard user={user} />
                             </>
                         )}</li>
-                        <li className=" mx-2"><a>details</a></li>
+                        <li className=" flex items-center justify-center">
+                            {/* The button to open modal */}
+                            <label htmlFor="my-modal" className=" btn bg-slate-600 flex text-white items-center ">About</label>
+                            {/* Put this part before </body> tag */}
+                            <input type="checkbox" id="my-modal" className="modal-toggle" />
+                            <div className="modal">
+                                <div className="modal-box">
+                                    <h3 className="font-bold text-lg text-green-400"> Created By LakshmanShankar</h3>
+                                    <p className="py-4  text-black">
+                                        You can find the Source on Github
+                                        <Link href={'https://github.com/lakshmanshankarc/student-performance-tracking'} className=' underline text-cyan-400'>here</Link>
+                                    </p>
+                                    <div className="modal-action">
+                                        <label htmlFor="my-modal" className="btn"> Close</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <li tabIndex={0}>
                             <a>
                                 Marks
@@ -47,7 +64,7 @@ function Navbar() {
                             </a>
                             <ul className="p-2 bg-black text-white">
                                 <li className=" hover:bg-slate-600 rounded-lg"><Link href={"/dashboard/marks"}>Post/get</Link></li>
-                                <li className=" hover:bg-slate-600 rounded-lg"><Link href={"./marks"}>Analytics</Link></li>
+                                <li className=" hover:bg-slate-600 rounded-lg"><Link href={"/dashboard/analytics"}>Analytics</Link></li>
                             </ul>
                         </li>
                     </ul>

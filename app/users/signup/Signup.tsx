@@ -20,7 +20,7 @@ function Signup() {
     try {
       user.tablename = user.classname + user.department + "II";
       let res = await axios.post('/api/user/signup', user)
-      alert("User Created Successfully");
+      alert(res.data.message)
     } catch (e) {
       alert("Unable to create User");
     }

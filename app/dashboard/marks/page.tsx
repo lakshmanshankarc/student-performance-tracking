@@ -7,13 +7,8 @@ function page() {
         <div>
             <GetMarks />
             <PostMarks />
-
-
-
-             {/* FilterComponents are only under testing */}
-             <FilterComponents/>
+            {/* FilterComponents are only under testing */}
         </div>
     )
 }
-
 export default page
