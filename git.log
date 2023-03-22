@@ -1,0 +1,90 @@
+* commit 2b2f69e4de2cf2034f9a1b666a0b325a47ff8eb8
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Wed Mar 22 14:36:34 2023 +0530
+| 
+|     resized graphs and added stats,file structure
+| 
+* commit 856274fa76f7e8d050d342d92c0c9789ffaba37e
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Wed Mar 15 18:20:55 2023 +0530
+| 
+|     finished README 🙂
+| 
+* commit 28e4f87152a6e5d48cdbfe58f6316064bc9d1986
+| Author: Lakshmanshankar <lakshmanshankarc@gmail.com>
+| Date:   Wed Mar 15 17:49:40 2023 +0530
+| 
+|     finished data visualization
+| 
+* commit 085dca589091f583777fd68ce5c0524225b8fd11
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Mon Mar 13 06:04:54 2023 +0530
+| 
+|     buggy commits
+| 
+* commit e66a7cf3843c420050846602a86f7f04d2df23e5
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Sun Mar 12 05:29:29 2023 +0530
+| 
+|     finished get/post marks
+| 
+* commit 358099ba6f849dca3d3d6fffecfb63c22d9ff85a
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Fri Mar 10 21:33:43 2023 +0530
+| 
+|     implemented get marks functionality deleted useless garbages
+| 
+* commit 3ebb368a45f16105fb94fae5548f0946d2ecf5aa
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Thu Mar 9 21:00:08 2023 +0530
+| 
+|     added login dashboard
+| 
+* commit 55223ca7166557df08e1f02defe6714b3e0ce21a
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Fri Feb 24 06:02:40 2023 +0530
+| 
+|     fixing role based auth
+|   
+*   commit 15630764433fa8fa0334e46dcbd8b3ecc3829fda
+|\  Merge: 2d450ff 8526ea7
+| | Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| | Date:   Thu Feb 23 12:15:39 2023 +0530
+| | 
+| |     Merge branch 'main' of github.com:lakshmanshankarc/student-performance-tracking
+| | 
+| * commit 8526ea7c8106fe2339ed59827a54e126e7b28597
+| | Author: Lakshmanshankar C <87634242+Lakshmanshankar@users.noreply.github.com>
+| | Date:   Tue Feb 21 20:20:53 2023 +0530
+| | 
+| |     Delete .env
+| | 
+* | commit 2d450ffcbe2011f04c3ceb80c576a8ca84c10375
+|/  Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+|   Date:   Thu Feb 23 12:11:28 2023 +0530
+|   
+|       finished-auth-role-based
+| 
+* commit b0f8aff14a78d0c993be60697acd0ccf129a0049
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Tue Feb 21 20:11:44 2023 +0530
+| 
+|     finished login
+| 
+* commit e74ff9848d371584aeb5dc6a8614205417aba65e
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Mon Feb 20 22:54:15 2023 +0530
+| 
+|     finished backend login
+| 
+* commit 37a0c09d44127224fa60442c274f6e02c62655c8
+| Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+| Date:   Mon Feb 20 21:28:35 2023 +0530
+| 
+|     initial commit
+| 
+* commit 2e437e7fde515e4541b0c233ce94dc190cb0b145
+  Author: Lakshmanshankar <lakshmanashankrc@gmail.com>
+  Date:   Mon Feb 20 21:28:01 2023 +0530
+  
+      first commit
