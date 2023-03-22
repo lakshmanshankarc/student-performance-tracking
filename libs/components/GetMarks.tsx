@@ -67,7 +67,7 @@ function GetMarks() {
                                     return (
                                         <div
                                             key={index}
-                                            className="flex w-full h-10 rounded-lg justify-center items-center font-mono text-slate-100 m-1 p-2 bg-zinc-600"
+                                            className="flex w-full h-10 rounded-lg justify-center items-center font-mono text-slate-100 m-1 p-1.5 bg-zinc-900 hover:bg-gray-800"
                                         >
                                             {key.toUpperCase()}
                                         </div>
@@ -82,7 +82,7 @@ function GetMarks() {
                 return (
                     <div
                         key={index}
-                        className="flex bg-zinc-200 hover:transition-all hover:bg-fuchsia-200 p-1"
+                        className="flex bg-zinc-200 hover:transition-all hover:bg-fuchsia-400 p-1"
                     >
                         {Object.keys(item).map((key, index) => {
                             return (

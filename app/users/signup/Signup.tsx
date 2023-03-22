@@ -30,19 +30,19 @@ function Signup() {
       <form onSubmit={handleSubmit} className=" w-full flex h-screen py-44 flex-col circle-grad justify-center items-center">
         <h1 className=' font-sans font-extrabold text-3xl'>Sign Up Here</h1>
         <label htmlFor="id" className='font-extrabold font-sans'>UserID</label>
-        <input type="text" placeholder="Type here" className="input w-full max-w-xl" name="id" id="id" onChange={(e) => setUser({ ...user, id: e.target.value })} />
+        <input type="text" placeholder="Type here" className="input w-full max-w-xl" name="id" id="id" onChange={(e) => setUser({ ...user, id: e.target.value })} required={true}/>
 
         <label htmlFor="email" className='font-extrabold font-sans'>Email</label>
-        <input type="email" name="email" id="email" onChange={(e) => setUser({ ...user, email: e.target.value })} className="input w-full  max-w-xl" placeholder='enter email' />
+        <input type="email" name="email" id="email" onChange={(e) => setUser({ ...user, email: e.target.value })} className="input w-full  max-w-xl" placeholder='enter email'required={true} />
 
         <label htmlFor="username" className='font-extrabold font-sans'>Username</label>
-        <input type="text" name="username" id="username" onChange={(e) => setUser({ ...user, username: e.target.value })} className="input w-full  max-w-xl" placeholder='enter name' />
+        <input type="text" name="username" id="username" onChange={(e) => setUser({ ...user, username: e.target.value })} className="input w-full  max-w-xl" placeholder='enter name' required={true} />
 
         <label htmlFor="password" className='font-extrabold font-sans'>Password</label>
-        <input type="password" name="password" id="password" onChange={(e) => setUser({ ...user, password: e.target.value })} className="input w-full max-w-xl" placeholder='enter password' />
+        <input type="password" name="password" id="password" onChange={(e) => setUser({ ...user, password: e.target.value })} className="input w-full max-w-xl" placeholder='enter password' required={true} />
 
         <label htmlFor="class" className='font-extrabold font-sans'>Class</label>
-        <select name="classname" id="class" onChange={(e) => setUser({ ...user, classname: e.target.value })} defaultValue="I" className="select w-full  max-w-xl">
+        <select name="classname" id="class" onChange={(e) => setUser({ ...user, classname: e.target.value })} defaultValue="I" className="select w-full  max-w-xl" required={true}>
           <option value="First">I</option>
           <option value="Second">II</option>
           <option value="Third">III</option>

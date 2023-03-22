@@ -1,0 +1,84 @@
+#to get this for your project use tree command with wc -l and pipe that output to a file using cat 
+#tree -I 'node_modules' | cat > ./file_structure # -i flag to ignore the node_modules
+.
+├── app
+│   ├── dashboard
+│   │   ├── analytics
+│   │   │   └── page.tsx
+│   │   ├── marks
+│   │   │   └── page.tsx
+│   │   ├── page.tsx
+│   │   └── StudentDetails.tsx
+│   ├── globals.css
+│   ├── head.tsx
+│   ├── layout.tsx
+│   ├── page.module.css
+│   ├── page.tsx
+│   └── users
+│       ├── login
+│       │   ├── Login.tsx
+│       │   └── page.tsx
+│       ├── page.tsx
+│       └── signup
+│           ├── page.tsx
+│           └── Signup.tsx
+├── env.sample
+├── file_structure
+├── libs
+│   └── components
+│       ├── FilterComponents.tsx
+│       ├── GetMarks.tsx
+│       ├── PostMarks.tsx
+│       └── RadarComponent.tsx
+├── next.config.js
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── pages
+│   └── api
+│       ├── connection.ts
+│       ├── details.ts
+│       ├── hello.ts
+│       ├── marks
+│       │   ├── averagebytest.ts
+│       │   ├── describe.ts
+│       │   ├── getstudentforteacher.ts
+│       │   ├── getstudentmarks.ts
+│       │   ├── getwithoptions.ts
+│       │   └── postmarks.ts
+│       └── user
+│           ├── details.ts
+│           ├── islogged.ts
+│           ├── login.ts
+│           ├── remove.ts
+│           └── signup.ts
+├── postcss.config.js
+├── public
+│   ├── favicon.ico
+│   ├── next.svg
+│   ├── thirteen.svg
+│   └── vercel.svg
+├── README.md
+├── screenshots
+│   ├── about.png
+│   ├── login.png
+│   ├── marks.png
+│   ├── profile.png
+│   ├── Screenshot from 2023-03-15 17-14-55.png
+│   ├── signup.png
+│   ├── vis1.png
+│   ├── vis2.png
+│   └── welcome.png
+├── sql
+│   ├── college.sql
+│   └── school.sql
+├── tailwind.config.js
+├── tree
+├── tsconfig.json
+├── types
+│   ├── collegeTables.ts
+│   └── userDetails.ts
+└── utils
+    └── main.ts
+
+18 directories, 61 files

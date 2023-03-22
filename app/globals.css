@@ -12,4 +12,16 @@ background: radial-gradient(circle, rgb(255, 223, 255) 0%, rgb(235, 235, 235) 37
 background: rgb(223,255,252);
 background: radial-gradient(circle, rgb(200, 244, 255) 0%, rgb(255, 255, 255) 37%, rgb(255, 255, 255) 69%, rgba(255,255,255,1) 85%, rgba(255,255,255,1) 100%);
 }
-    
+
+.static-with{
+    width: 550px;
+    height: 600px;
+}
+
+.static-with-center{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -10,34 +10,36 @@ function RadarComponent({ data }: any) {
       {data &&
         Object.values(data).map((item: any) => {
           return (
-            <div className='w-full flex bg-slate-50 py-10 rounded-md overflow-scroll px-10 m-5 ' key={item}>
+            <div className='w-full flex bg-slate-50 h-full py-10 rounded-md overflow-scroll px-10 m-5 ' key={item}>
               <h1 className=' font-extrabold text-center text-3xl ml-5'>{item.id}</h1>
+              <RadarChart data={item.test} label={item.test.map((itemla: any) => { return itemla.label })} name={item.test.map((x: any) => { return x.name })} />
               {item.test.map((item: any) => {
                 return (
-                  <>
-                    <PieChart data={item.data} label={item.label} name={item.name} />
-                    <div className="dropdown dropdown-left">
+                  <div className=' w-full'>
+
+                    <div className="dropdown dropdown-right">
                       <label tabIndex={0} className="btn m-1 bg-slate-500 text-white absolute">More Info</label>
                       <ul tabIndex={0} className="dropdown-content menu p-2 bg-base-100 rounded-box w-52 shadow-xl">
                         <li className=' w-full text-2xl font-serif text-teal-500 text-center'>{item.name}</li>
                         <li className=' w-full text-md font-serif text-teal-500 text-center'>{Math.round(item.total)} Total</li>
-                        <li className=' flex flex-col'>
+                        <li className=' flex w-full flex-col border-0 dropdown-left dropdown '>
                           {item.data.map((dataItem: any, index: number) => {
                             return (
-                              <div className=' flex w-max p-1 px-10 justify-between'>
-                                <li>{dataItem}</li>
-                                <h1>{item.label[index]}</h1>
+                              <div className='flex w-full p-0 m-0'>
+                                <li><Colorizer mark={dataItem} /></li>
+                                <li>{item.label[index]}</li>
                               </div>
                             )
                           })}
                         </li>
                       </ul>
                     </div>
+                    <PieChart data={item.data} label={item.label} name={item.name} />
 
-                  </>
+                  </div>
                 )
               })}
-              <RadarChart data={item.test} label={item.test.map((itemla: any) => { return itemla.label })} name={item.test.map((x: any) => { return x.name })} />
+
             </div>
           )
         })
@@ -64,7 +66,7 @@ function PieChart({ data, label, name }: { data: Array<number>, label: Array<str
     ],
   };
   return (
-    <div className='w-1/3 h-1/3 p-4 shadow-sm mx-10'>
+    <div className=' static-with p-10 rounded-xl m-5 shadow-lg' >
       <Doughnut data={Data} />
     </div>
   )
@@ -87,8 +89,22 @@ function RadarChart({ data, label, name }: { data: Array<Array<number>>, label: 
     datasets: datset,
   };
   return (
-    <div className='w-1/3 h-1/3 p-4  shadow-sm mx-10'>
-      <Radar data={localdata} />;
-    </div>
+    <div className='static-with-center p-10 rounded-xl m-5 shadow-lg'>
+      < Radar data={localdata} />;
+    </div >
   )
+}
+
+
+function Colorizer({ mark }: { mark: number }) {
+  if (mark < 40) {
+    return (
+      <i className=' text-red-500'>{mark}</i>
+    )
+  }
+  else {
+    return (
+      <i className={` text-teal-400 `}>{mark}</i>
+    )
+  }
 }

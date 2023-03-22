@@ -18,7 +18,7 @@ function PostMarks() {
     useEffect(() => {
         getTable();
     }, [])
-    if (isStudent) return <> Study Hard to Get Good Grades</>;
+    if (isStudent) return <> </>;
     else {
         return (
             <div className=" w-full px-10 rounded-lg ">
@@ -53,7 +53,7 @@ function PostMarks() {
                                     name={`${sub}`}
                                     id={`${sub}`}
                                     placeholder={`${sub}`}
-                                    className="flex w-full h-10 rounded-lg justify-center items-center font-mono text-black m-0.5 px-1.5 bg-zinc-200"
+                                    className="flex w-full h-10 rounded-lg justify-center items-center font-mono text-black m-0.5 px-1.5 bg-zinc-200" required
                                 />
                             </div>
                         ))}
