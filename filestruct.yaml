@@ -1,5 +1,6 @@
 #to get this for your project use tree command with wc -l and pipe that output to a file using cat 
 #tree -I 'node_modules' | cat > ./file_structure # -i flag to ignore the node_modules
+# git ls-files | grep -v -e "^\.gitignore$" | xargs wc -l | cat > gitlines.txt
 .
 ├── app
 │   ├── dashboard

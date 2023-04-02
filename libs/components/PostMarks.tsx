@@ -21,7 +21,7 @@ function PostMarks() {
     if (isStudent) return <> </>;
     else {
         return (
-            <div className=" w-full px-10 rounded-lg ">
+            <div className=" w-full px-10 rounded-lg py-24">
                 <h1 className=" text-4xl text-teal-400 font-extrabold py-10 text-center">
                     Post Marks
                 </h1>

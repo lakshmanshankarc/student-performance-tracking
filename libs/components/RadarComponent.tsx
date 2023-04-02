@@ -50,8 +50,6 @@ function RadarComponent({ data }: any) {
 
 export default RadarComponent
 
-
-
 function PieChart({ data, label, name }: { data: Array<number>, label: Array<string>, name: string }) {
   const Data = {
     labels: label,
